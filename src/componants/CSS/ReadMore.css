@@ -1,0 +1,15 @@
+.rm-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 80px;
+
+}
+
+@media screen and (max-width:768px) {
+
+    .rm-container {
+        display: grid;
+        grid-template-columns: 2fr;
+
+    }
+}

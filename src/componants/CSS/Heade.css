@@ -1,0 +1,13 @@
+.text-div {
+    font-size: 8px;
+    position: relative;
+    top: -15px;
+}
+
+.header-div {
+    margin-top: 30px;
+    background-color: #2D1B69;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

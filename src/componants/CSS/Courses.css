@@ -1,0 +1,23 @@
+.home-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 60px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width:768px) {
+    .home-container {
+        background-color: red;
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+
+    .course-container {
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+}
