@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import DisplayService from './DisplayService/DisplayService'
+import DisplayService from './DisplayService/DisplayService';
 import './Service.css'
 
 const Service = () => {
