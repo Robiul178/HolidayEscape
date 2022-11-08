@@ -3,7 +3,7 @@ import Routes from './routes/Routes';
 
 const App = () => {
   return (
-    <div>
+    <div className='max-w-screen-xl mx-auto'>
       <Routes></Routes>
     </div>
   );

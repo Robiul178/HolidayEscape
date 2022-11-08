@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import DisplayService from './DisplayService/DisplayService';
+import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import DisplayService from './DisplayService/DisplayService'
+import './Service.css'
 
 const Service = () => {
+
     const [services, setServices] = useState([]);
-    console.log('From service page', services)
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -12,7 +15,7 @@ const Service = () => {
     }, [])
     return (
         <div>
-            <div>
+            <div className='grid grid-cols-3 gap-4'>
                 {
                     services.map(service => <DisplayService
                         service={service}
@@ -20,6 +23,10 @@ const Service = () => {
                     ></DisplayService>)
                 }
             </div>
+
+
+
+
         </div>
     );
 };

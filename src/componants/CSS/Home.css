@@ -1,11 +1,7 @@
-.main-container {
+.home-main-container {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-}
+    grid-template-columns: 3fr 2fr;
 
-.text-side {
-    margin-top: 10rem;
-    padding: 50px;
 }
 
 @media screen and (max-width:768px) {

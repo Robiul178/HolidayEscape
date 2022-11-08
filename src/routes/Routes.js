@@ -1,14 +1,13 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import Home from '../componants/Home';
 import Login from './../componants/Login';
 import Register from '../componants/Register';
 import Main from '../Layout/Main';
 import Blog from '../componants/Blog';
-import ReadMore from '../componants/ReadMore/ReadMore';
 import NotFound404 from '../componants/NotFound404/NotFound404';
 import Service from '../componants/Service/Service';
+import SeeMore from '../componants/SeeMore/SeeMore';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -18,7 +17,7 @@ const Routes = () => {
             children: [
                 {
                     path: '/',
-                    element: <Home></Home>
+                    element: <Home></Home>,
                 },
                 {
                     path: '/login',
@@ -30,7 +29,13 @@ const Routes = () => {
                 },
                 {
                     path: '/services/:id',
-                    element: <Service></Service>
+                    element: <Service></Service>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                },
+                {
+                    path: '/seemore/:id',
+                    element: <SeeMore></SeeMore>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
                 },
                 {
                     path: '/register',
@@ -39,11 +44,6 @@ const Routes = () => {
                 {
                     path: '*',
                     element: <NotFound404></NotFound404>
-                },
-                {
-                    path: '/readmore/:id',
-                    element: <ReadMore></ReadMore>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
                 }
 
             ]
