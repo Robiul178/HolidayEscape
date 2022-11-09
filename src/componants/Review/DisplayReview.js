@@ -12,7 +12,7 @@ const DisplayReview = (props) => {
 
 
     return (
-        <div className='border'>
+        <div className='border-b p-4'>
             <div className='flex'>
                 <div className="w-8 rounded">
                     <img src={user?.photoURL} />
@@ -22,7 +22,7 @@ const DisplayReview = (props) => {
                 </div>
             </div>
             <div>
-                <p className=''>{textarea}</p>
+                <p >{textarea}</p>
             </div>
         </div>
     );

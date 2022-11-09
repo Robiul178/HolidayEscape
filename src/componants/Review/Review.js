@@ -57,16 +57,20 @@ const Review = () => {
                     ></DisplayReview>)
                 }
             </div>
+            <br />
             <div>
+                <p className='text-xl font-bold'>
+                    Your Review
+                </p>
                 <form onSubmit={handleAddReview}>
-                    <input onBlur={handleInputBlur} type="text" name="name" placeholder='name' />
+                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="name" placeholder='Your Name!' />
                     <br />
                     <div>
                         <label for=""></label>
-                        <textarea onBlur={handleInputBlur} class="form-control" type="text" placeholder='Write here!' name="textarea" id="" rows="3"></textarea>
+                        <textarea className='border rounded-md' onBlur={handleInputBlur} class="form-control" type="text" placeholder='Write here!' name="textarea" id="" rows="5"></textarea>
                     </div>
                     <br />
-                    <button type="submit">Submit</button>
+                    <button className='btn' type="submit">Submit</button>
                 </form>
             </div>
         </div>
