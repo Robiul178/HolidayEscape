@@ -12,7 +12,7 @@ const Service = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data));
-    }, [])
+    }, []);
     return (
         <div>
             <div className='grid grid-cols-3 gap-4'>

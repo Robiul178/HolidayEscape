@@ -7,7 +7,7 @@ const SeeMore = () => {
     const { title, description, image } = service;
 
     return (
-        <div>
+        <div className='grid grid-cols-2'>
             <div>
                 <img src={image} alt="" />
                 <h2 className='text-2xl font-semibold p-4'>{title}</h2>

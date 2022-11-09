@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './Context/UseContext';
 import './CSS/Heade.css'
 import { FiLogOut } from 'react-icons/fi';
-import Tippy from '@tippyjs/react';
 
 
 const Header = () => {
@@ -48,10 +47,9 @@ const Header = () => {
                                 user?.uid ?
                                     <div className="avatar">
                                         <div className="w-8 rounded">
-                                            <Tippy content={user.displayName}>
-                                                <img src={user.photoURL} alt="Tailwind-CSS-Avatar-component" />
-                                            </Tippy>
+                                            <img src={user.photoURL} alt="Tailwind-CSS-Avatar-component" />
                                         </div>
+                                        <button><Link to='/myreview'>My Review</Link> </button>
                                         <button onClick={logOut} className="btn ml-2 btn-outline"><FiLogOut /></button>
                                     </div>
                                     :

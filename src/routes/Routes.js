@@ -8,6 +8,8 @@ import NotFound404 from '../componants/NotFound404/NotFound404';
 import Service from '../componants/Service/Service';
 import SeeMore from '../componants/SeeMore/SeeMore';
 import Home from '../Layout/Home/Home';
+import MyReview from '../componants/MyReview/MyReview';
+// import DisplayReview from '../componants/Review/DisplayReview';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -27,6 +29,11 @@ const Routes = () => {
                     path: '/blog',
                     element: <Blog></Blog>
                 },
+                // {
+                //     path: '/displayreview',
+                //     element: <DisplayReview></DisplayReview>,
+                //     loader: () => fetch('http://localhost:5000/reviews')
+                // },
                 {
                     path: '/services/:id',
                     element: <Service></Service>,
@@ -44,6 +51,10 @@ const Routes = () => {
                 {
                     path: '*',
                     element: <NotFound404></NotFound404>
+                },
+                {
+                    path: '/myreview',
+                    element: <MyReview></MyReview>
                 }
 
             ]
