@@ -29,10 +29,9 @@ const Header = () => {
                                 <li><a><Link className="btn btn-ghost normal-case text-xl" to="/blog">BLOG</Link></a></li>
                             </ul>
                         </div>
-                        <Link to='/' className="btn btn-ghost normal-case text-xl">
+                        <Link to='/' className=" text-2xl">
                             <div>
-                                <h1>CODECADEMY</h1>
-                                <span className='text-div'>ONLINE EDUCATION & LEARNING</span>
+                                <h1>HolidayEscape</h1>
                             </div>
                         </Link>
                     </div>

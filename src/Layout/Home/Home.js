@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import HomeService from './HomeService/HomeService';
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
                         ></HomeService>)
                     }
                 </div>
+                <Link className="btn btn-ghost normal-case text-xl" to="/services/:id">See More</Link>
             </div>
         </div>
     );
