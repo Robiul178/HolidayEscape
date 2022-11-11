@@ -32,17 +32,17 @@ const Routes = () => {
                 // {
                 //     path: '/displayreview',
                 //     element: <DisplayReview></DisplayReview>,
-                //     loader: () => fetch('http://localhost:5000/reviews')
+                //     loader: () => fetch('https://assignment11-server-robiul178.vercel.app/reviews')
                 // },
                 {
                     path: '/services/:id',
                     element: <Service></Service>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                    loader: ({ params }) => fetch(`https://assignment11-server-robiul178.vercel.app/services/${params.id}`)
                 },
                 {
                     path: '/seemore/:id',
                     element: <SeeMore></SeeMore>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                    loader: ({ params }) => fetch(`https://assignment11-server-robiul178.vercel.app/services/${params.id}`)
                 },
                 {
                     path: '/register',

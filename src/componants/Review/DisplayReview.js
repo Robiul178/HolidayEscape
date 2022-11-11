@@ -14,7 +14,7 @@ const DisplayReview = (props) => {
     return (
         <div className='border-b p-4'>
             <div className='flex'>
-                <div className="w-8 rounded">
+                <div className="w-8 rounded-sm">
                     <img src={user?.photoURL} />
                 </div>
                 <div>

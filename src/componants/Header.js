@@ -45,11 +45,9 @@ const Header = () => {
                         <div className='user-info'>
                             {
                                 user?.uid ?
-                                    <div className="avatar">
-                                        <div className="w-8 rounded">
-                                            <img src={user.photoURL} alt="Tailwind-CSS-Avatar-component" />
-                                        </div>
-                                        <button><Link to='/myreview'>My Review</Link> </button>
+                                    <div>
+                                        <button className='btn'><Link to='/myreview'>My Review</Link> </button>
+                                        <button className='btn'><Link to='/addservice'>Add service</Link> </button>
                                         <button onClick={logOut} className="btn ml-2 btn-outline"><FiLogOut /></button>
                                     </div>
                                     :

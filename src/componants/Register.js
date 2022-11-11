@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from './Context/UseContext';
-import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
 
-    const { createUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
 
     const handleSubmit = event => {
@@ -36,13 +36,8 @@ const Register = () => {
                 console.log(user)
             })
     }
-    const handleGitHubSignIn = () => {
-        signInWithGithub()
-            .then(result => {
-                const user = result.user;
-                console.log(user)
-            })
-    }
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
@@ -65,12 +60,6 @@ const Register = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
-                            </label>
-                            <input type="text" name='photoURL' placeholder="Your Photo URL" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="text" name='password' placeholder="Password" className="input input-bordered" required />
@@ -82,7 +71,6 @@ const Register = () => {
                     </form>
                     <div className="flex justify-center">
                         <button onClick={handleGoogleSignIn} className="btn" > <FaGoogle /> </button>
-                        <button onClick={handleGitHubSignIn} className="btn"><FaGithub /></button>
                     </div>
                 </div>
             </div>
