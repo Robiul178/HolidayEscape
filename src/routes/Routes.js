@@ -9,7 +9,7 @@ import Service from '../componants/Service/Service';
 import SeeMore from '../componants/SeeMore/SeeMore';
 import Home from '../Layout/Home/Home';
 import MyReview from '../componants/MyReview/MyReview';
-// import DisplayReview from '../componants/Review/DisplayReview';
+import PrivetRoute from './PrivetRoute';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -29,11 +29,6 @@ const Routes = () => {
                     path: '/blog',
                     element: <Blog></Blog>
                 },
-                // {
-                //     path: '/displayreview',
-                //     element: <DisplayReview></DisplayReview>,
-                //     loader: () => fetch('https://assignment11-server-robiul178.vercel.app/reviews')
-                // },
                 {
                     path: '/services/:id',
                     element: <Service></Service>,
@@ -54,7 +49,7 @@ const Routes = () => {
                 },
                 {
                     path: '/myreview',
-                    element: <MyReview></MyReview>
+                    element: <PrivetRoute> <MyReview></MyReview></PrivetRoute>
                 }
 
             ]

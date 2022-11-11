@@ -12,8 +12,8 @@ const DisplayService = (props) => {
                     <div className="card-body">
                         <h2 className="card-title">{title}</h2>
                         <p>{
-                            description.length > 90 ?
-                                <p>{description.slice(0, 90) + '...'}</p>
+                            description.length > 100 ?
+                                <p>{description.slice(0, 100) + '...'}</p>
                                 :
                                 <p>{description}</p>
                         }</p>

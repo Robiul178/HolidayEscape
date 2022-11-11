@@ -1,21 +1,18 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import DisplayReview from './DisplayReview';
 
 const Review = () => {
 
     const [user, setUser] = useState([]);
 
-    const [reviews, setReviews] = useState([]);
+    // const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
-        fetch('https://assignment11-server-robiul178.vercel.app/reviews')
-            .then(res => res.json())
-            .then(data => {
-                setReviews(data)
-            })
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://assignment11-server-robiul178.vercel.app/reviews')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setReviews(data)
+    //         })
+    // }, [])
 
 
     const handleAddReview = event => {
@@ -49,14 +46,7 @@ const Review = () => {
 
     return (
         <div>
-            <div>
-                {
-                    reviews.map(review => <DisplayReview
-                        key={review._id}
-                        review={review}
-                    ></DisplayReview>)
-                }
-            </div>
+
             <br />
             <div>
                 <p className='text-xl font-bold'>
