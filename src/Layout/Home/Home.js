@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 import HomeService from './HomeService/HomeService';
 
 const Home = () => {
@@ -17,6 +18,9 @@ const Home = () => {
 
     return (
         <div>
+            <div>
+                <Banner></Banner>
+            </div>
             <div>
                 <h1 className='text-4xl p-12 font-semibold text-center'>Our Service</h1>
                 <div className='grid grid-cols-3 gap-4'>
