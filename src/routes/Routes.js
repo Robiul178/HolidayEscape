@@ -50,11 +50,11 @@ const Routes = () => {
                 },
                 {
                     path: '/myreview',
-                    element: <MyReview></MyReview>
+                    element: <PrivetRoute><MyReview></MyReview></PrivetRoute>
                 },
                 {
                     path: '/review',
-                    element: <PrivetRoute> <Review></Review> </PrivetRoute>
+                    element: <PrivetRoute> <Review></Review> </PrivetRoute>,
                 }
 
             ]

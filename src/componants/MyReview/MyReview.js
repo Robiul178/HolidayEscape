@@ -8,14 +8,15 @@ const MyReview = () => {
 
 
     const { user } = useContext(AuthContext)
-    const [myReview, setMyReview] = useState({});
+    const [reviews, setReviews] = useState([]);
+    // console.log(myReview)
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user.email}`)
+        fetch(`https://assignment11-server-robiul178.vercel.app/reviews?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
-                setMyReview(data)
+                setReviews(data)
                 console.log('from my review', data)
             });
     }, [user?.email]);
@@ -25,15 +26,14 @@ const MyReview = () => {
 
     return (
         <div>
-            <h2>Your review:{myReview.length}</h2>
-            <div>
-                {
-                    myReview.map(review => <DisplayMyReview
-                        review={review}
-                        key={review._id}
-                    ></DisplayMyReview>)
-                }
-            </div>
+
+            {
+                reviews.map(review => <DisplayMyReview
+                    review={review}
+                    key={review._id}
+                ></DisplayMyReview>)
+            }
+
         </div>
     );
 };

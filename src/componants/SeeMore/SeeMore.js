@@ -38,9 +38,8 @@ const SeeMore = () => {
                             review={review}
                         ></DisplayReview>)
                     }
-
                 </div>
-                <Link to={`/review`}>
+                <Link to='/review'>
                     <button className="btn btn-outline btn-success">Added Your Review</button>
                 </Link>
             </div>

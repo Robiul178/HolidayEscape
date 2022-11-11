@@ -44,11 +44,8 @@ const Review = () => {
         setUser(newUser);
     }
 
-
     return (
         <div>
-
-            <br />
             <div>
                 <p className='text-xl font-bold'>
                     Your Review

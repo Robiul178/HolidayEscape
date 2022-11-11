@@ -9,13 +9,11 @@ const DisplayReview = (props) => {
     const { name, textarea } = props.review;
 
 
-
-
     return (
         <div className='border-b p-4'>
             <div className='flex'>
                 <div className="w-8 rounded-sm">
-                    <img src={user?.photoURL} />
+                    <img src={user?.email} />
                 </div>
                 <div>
                     <h1 className='text-2x font-semibold'>{name}</h1>
