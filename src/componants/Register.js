@@ -8,15 +8,14 @@ const Register = () => {
     const [error, setError] = useState('');
 
     const handleSubmit = event => {
+        console.log('register hoyce')
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         const name = form.name.value;
-        const photoURL = form.photoURL.value;
-        createUser(photoURL, name)
 
-        createUser(email, password)
+        createUser(email, password, name)
             .then(result => {
                 const user = result.user;
                 console.log(user)
@@ -36,7 +35,6 @@ const Register = () => {
                 console.log(user)
             })
     }
-
 
     return (
         <div className="hero min-h-screen bg-base-200">

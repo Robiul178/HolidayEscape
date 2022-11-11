@@ -40,7 +40,7 @@ const SeeMore = () => {
                     }
 
                 </div>
-                <Link to={`/myreview`}>
+                <Link to={`/review`}>
                     <button className="btn btn-outline btn-success">Added Your Review</button>
                 </Link>
             </div>
