@@ -5,17 +5,6 @@ const Review = () => {
 
     const [user, setUser] = useState([]);
 
-    // const [reviews, setReviews] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('https://assignment11-server-robiul178.vercel.app/reviews')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setReviews(data)
-    //         })
-    // }, [])
-
-
     const handleAddReview = event => {
         event.preventDefault();
 

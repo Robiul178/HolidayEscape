@@ -11,6 +11,7 @@ import Home from '../Layout/Home/Home';
 import PrivetRoute from './PrivetRoute';
 import Review from '../componants/Review/Review';
 import MyReview from '../componants/MyReview/MyReview';
+import AddService from '../componants/Service/AddService/AddService';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const Routes = () => {
                 {
                     path: '*',
                     element: <NotFound404></NotFound404>
+                },
+                {
+                    path: '/addservice',
+                    element: <AddService></AddService>
                 },
                 {
                     path: '/myreview',

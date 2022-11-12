@@ -22,7 +22,7 @@ const Header = () => {
                                 <li><a><Link className="btn btn-ghost normal-case text-xl" to="/">HOME</Link></a></li>
                                 <li tabIndex={0}>
                                     <a className="justify-between">
-                                        <li><Link className="btn btn-ghost normal-case text-xl" to="/courses/:id">COURSES</Link></li>
+                                        <li><Link className="btn btn-ghost normal-case text-xl" to="/services/:id">SERVICES</Link></li>
                                     </a>
                                 </li>
                                 <li><a><Link className="btn btn-ghost normal-case text-xl" to="/blog">BLOG</Link></a></li>

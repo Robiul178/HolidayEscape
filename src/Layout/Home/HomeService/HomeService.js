@@ -1,8 +1,22 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DisplayAddedService from '../../../componants/Service/AddService/DisplayAddedService';
 
 const HomeService = (props) => {
+
     const { image, title, id, description, price, rating } = props.service;
+    const [addServices, setAddServices] = useState([]);
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/service')
+            .then(res => res.json())
+            .then(data => setAddServices(data))
+    }, [])
+
+
     return (
         <div className='main-container'>
             <div>
@@ -23,6 +37,14 @@ const HomeService = (props) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                {
+                    addServices.map(service => <DisplayAddedService
+                        key={service._id}
+                        service={service}
+                    ></DisplayAddedService>)
+                }
             </div>
         </div>
     );
