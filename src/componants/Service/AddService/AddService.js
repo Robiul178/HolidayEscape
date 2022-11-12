@@ -8,7 +8,7 @@ const AddService = () => {
         event.preventDefault();
 
         console.log(service)
-        fetch('http://localhost:5000/service', {
+        fetch('https://assignment11-server-robiul178.vercel.app/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

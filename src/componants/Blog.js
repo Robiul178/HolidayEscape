@@ -5,39 +5,44 @@ const Blog = () => {
     return (
         <div>
             <div className="blog text-left border p-4 mt-20">
-                <h1 className="text-xl mb-3">Q1. What is cors?</h1><p>
-                    Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
-                </p>
+                <h1 className="text-xl mb-3">Q1. What is cors?</h1><p className='text-lg'>
+                    SQL is the programming language used to interface with relational databases. (Relational databases model data as records in rows and tables with logical links between them). NoSQL is a class of DBMs that are non-relational and generally do not use SQL.
+                </p> <br />
+                <p className="text-lg">There are five practical differences between SQL and NoSQL:</p>
+                <ol>
+                    <li>Language</li>
+                    <li>Scalability</li>
+                    <li>Structure</li>
+                    <li>Properties</li>
+                    <li>Support and communities</li>
+                </ol>
             </div>
             <div className="blog text-left border p-4 mt-6">
-                <h1 className="text-xl mb-3">Q2. Why are you using firebase? What other options do you have to implement authentication?</h1>
+                <h1 className="text-xl mb-3">Q2. What is JWT, and how does it work?</h1>
                 <p>
-                    The Firebase Realtime Database lets you build rich, collaborative applications by allowing secure access to the database directly from client-side code. Data is persisted locally, and even while offline, realtime events continue to fire, giving the end user a responsive experience.
+                    JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.
+                </p>
+                <p>
+                    JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.
 
-                    <br /><br /> Authentication is common way to handle security for all applications. This is only way to answer the question “who you are?” to the application, when comes to stateless architecture or service oriented architecture we got lot of new concepts and technologies in the market. In this article we will learn how to handle authentication on RESTful APIs.
-                    <br /><br />
-                    Lets start by listing the various ways through which we can achieve authentication,<br />
-                    <ul>
-                        <li>Cookie-Based authentication</li>
-                        <li>Token-Based authentication</li>
-                        <li>Third party access(OAuth, API-token)</li>
-                        <li>OpenId</li>
-                        <li>SAML</li>
-                    </ul>
+                    A JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.
                 </p>
             </div>
             <div className="blog text-left border p-4 mt-6">
-                <h1 className="text-xl mb-3">Q3.How does the private route work?</h1>
+                <h1 className="text-xl mb-3">Q3.What is the difference between javascript and NodeJS?</h1>
                 <p>
-                    The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated (Logged in).
+                    <span className='font-semibold'> 1. NodeJS :</span>
+                    NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.
+                </p><br />
+                <p>
+                    <span className='font-semibold'> 2. JavaScript : </span>
+                    Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype inheritance.
                 </p>
             </div>
             <div className="blog text-left border p-4 mt-6">
-                <h1 className="text-xl mb-3">Q4. What is Node? How does Node work?</h1>
+                <h1 className="text-xl mb-3">Q4. How does NodeJS handle multiple requests at the same time?</h1>
                 <p>
-                    Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser. Ryan Dahl developed it in 2009, and its latest iteration, version 15.14, was released in April 2021. Developers use Node. <br /><br />
-                    It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node. js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.
-                </p>
+                    NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them</p>
             </div>
         </div>
     );
