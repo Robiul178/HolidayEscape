@@ -36,15 +36,15 @@ const AddService = () => {
 
     return (
         <div>
-            <div>
+            <div className='text-center mt-10'>
                 <form onSubmit={handleAddService}>
-                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="name" placeholder='Service Name!' />
-                    <br />
-                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="description" placeholder='Service description!' />
-                    <br />
-                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="photoURL" placeholder='Your Service photoURL!' />
-                    <br />
-                    <button className='btn' type="submit">Submit</button>
+                    <input type="text" onBlur={handleInputBlur} placeholder="Service Name!" name="name" className="input input-bordered input-secondary w-full max-w-xs" />
+                    <br /> <br />
+                    <input type="text" onBlur={handleInputBlur} placeholder="Service description! more than 100 word" name="description" className="input input-bordered input-secondary w-full max-w-xs" />
+                    <br /> <br />
+                    <input type="text" onBlur={handleInputBlur} placeholder="Your Service photoURL!" name="photoURL" className="input input-bordered input-secondary w-full max-w-xs" />
+                    <br /> <br />
+                    <button className='btn btn-success' type="submit">Submit</button>
                 </form>
             </div>
         </div>
