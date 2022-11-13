@@ -43,7 +43,7 @@ const Home = () => {
                         ></HomeService>)
                     }
                 </div>
-                <div>
+                <div className='grid grid-cols-3 gap-4'>
                     {
                         addServices.map(addService => <DisplayAddedService
                             addService={addService}
