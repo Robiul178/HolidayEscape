@@ -13,9 +13,7 @@ server code Link: [https://github.com/Porgramming-Hero-web-course/b6a11-service-
 2. Use privet route.
 3.Use MongDB for back end.
 4.User can added review and service.
-5.
-6.when user hover mouse in profile picture then user can see user name
-
+5.When clicking on the image of the service, the picture will be viewed on full screen. 
 
 
 

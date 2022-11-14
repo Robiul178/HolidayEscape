@@ -14,7 +14,7 @@ const DisplayMyReview = ({ review }) => {
 
 
     const handleDelete = review => {
-        const agree = window.confirm(`Are you sure you want to delete:${review.name}`)
+        const agree = window.confirm(`Are you sure you want to delete your review`)
 
         if (agree) {
             fetch(`https://assignment11-server-robiul178.vercel.app/reviews/${review._id}`, {

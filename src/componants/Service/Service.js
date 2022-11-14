@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import DisplayService from './DisplayService/DisplayService';
 import './Service.css'
 
@@ -15,6 +16,9 @@ const Service = () => {
     }, []);
     return (
         <div>
+            <Helmet>
+                <title>HolidayEscape-Service</title>
+            </Helmet>
             <div className='grid grid-cols-3 gap-4'>
                 {
                     services.map(service => <DisplayService

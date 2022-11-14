@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './Context/UseContext';
 
@@ -32,6 +33,9 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>HolidayEscape-Login</title>
+            </Helmet>
             <div className="hero-content flex-col ">
                 <div className="text-center ">
                     <h1 className="text-5xl font-bold">Login now!</h1>

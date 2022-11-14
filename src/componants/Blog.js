@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './CSS/Blog.css'
 
 const Blog = () => {
     return (
         <div>
+            <Helmet>
+                <title>HolidayEscape-Blog</title>
+            </Helmet>
             <div className="blog text-left border p-4 mt-20">
                 <h1 className="text-xl mb-3">Q1. What is cors?</h1><p className='text-lg'>
                     SQL is the programming language used to interface with relational databases. (Relational databases model data as records in rows and tables with logical links between them). NoSQL is a class of DBMs that are non-relational and generally do not use SQL.

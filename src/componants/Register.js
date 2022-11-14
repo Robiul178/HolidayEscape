@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from './Context/UseContext';
 import { FaGoogle } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
 
@@ -38,6 +39,9 @@ const Register = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>HolidayEscape-Register</title>
+            </Helmet>
             <div className="hero-content flex-col ">
                 <div className="text-center ">
                     <h1 className="text-5xl font-bold">Register Here!</h1>

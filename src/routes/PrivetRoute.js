@@ -7,7 +7,6 @@ const PrivetRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        console.log('Yes Loading Found')
         return <div className='text-white'>Loading...</div>
     }
     if (user && user.uid) {

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import './SeeMore.css';
 import DisplayReview from '../Review/DisplayReview'
+import { Helmet } from 'react-helmet';
 
 const SeeMore = () => {
     const service = useLoaderData();
@@ -25,6 +26,9 @@ const SeeMore = () => {
 
     return (
         <div className='seemore-container'>
+            <Helmet>
+                <title>HolidayEscape-Service</title>
+            </Helmet>
             <div>
                 <img src={image} alt="" />
                 <h2 className='text-2xl font-semibold p-4'>{title}</h2>

@@ -42,7 +42,7 @@ const Review = () => {
                 <form onSubmit={handleAddReview}>
                     <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="name" placeholder='Your Name!' />
                     <br />
-                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="email" placeholder='Your email!' />
+                    <input className='border rounded-md' onBlur={handleInputBlur} type="text" name="email" placeholder='Your login email!' />
                     <br />
                     <div>
                         <label for=""></label>

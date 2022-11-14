@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import DisplayAddedService from '../../componants/Service/AddService/DisplayAddedService';
 import Banner from '../Banner/Banner';
+import About from './About/About';
 import HomeService from './HomeService/HomeService';
 
 const Home = () => {
@@ -30,6 +32,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>HolidayEscape-Home</title>
+            </Helmet>
             <div>
                 <Banner></Banner>
             </div>
@@ -50,7 +55,10 @@ const Home = () => {
                         ></DisplayAddedService>)
                     }
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl" to="/services/:id">See More</Link>
+                <Link className="btn btn-ghost pt-2 normal-case text-xl" to="/services/:id">See More</Link>
+            </div>
+            <div>
+                <About></About>
             </div>
         </div>
     );
